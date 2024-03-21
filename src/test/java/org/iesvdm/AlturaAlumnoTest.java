@@ -50,6 +50,34 @@ public class AlturaAlumnoTest {
     @Test
     void buscaNombre()
     {
+        int indice = -1;
+        String[] nombres = {"David, Jose, Cesar"};
+        String nombre = "Jose";
 
+        int resultado = AlturaAlumno.buscaNombre(nombres, nombre);
+        assertTrue(indice==resultado);
+    }
+
+    @Test
+    void mostrar(){
+        String[] arrayNombre = new String[1];
+        arrayNombre[0]="David";
+        Double[] arrayAltura = new Double[1];
+        arrayAltura[0]=1.80;
+    }
+
+    @Test
+    void calculaMaximo(){
+        double [] array = {1.37, 1.60, 1.45};
+        assertTrue(AlturaAlumno.calculaMaximo(array)[0]==1);
+        assertTrue(AlturaAlumno.calculaMaximo(array)[1]==1.60);
+    }
+
+    @Test
+    void calculaMedia(){
+        double[] array = {1.0, 2.0, 3.0, 4.0, 5.0};
+        assertTrue(AlturaAlumno.calculaMedia(array)==3.0);
     }
 }
+
+
